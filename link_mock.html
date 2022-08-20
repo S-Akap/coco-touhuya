@@ -18,7 +18,7 @@
 <body>
     <script>
         setTimeout(function () {
-            history.back();
+            window.location.href = './index.html';
         }, 60 * 1000);
     </script>
     <style>
@@ -113,6 +113,31 @@
             justify-content: center;
             align-items: center;
         }
+
+        .left>a {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+        }
+
+        .arrow {
+            position: relative;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 49px;
+            letter-spacing: 0.01em;
+            color: #34B8D6;
+        }
+
+        .arrow::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            transform: translateY(-50%);
+            border: 10px solid transparent;
+            border-right: 15px solid #34B8D6;
+        }
     </style>
     <main class="main">
         <div class="left">
@@ -128,6 +153,11 @@
                     ぜひお手持ちのスマートフォンで読み込んでください。
                 </p>
             </span>
+            <a href="./index.html">
+                <span class="arrow">
+                    サイトに戻る
+                </span>
+            </a>
         </div>
         <div class="right">
             <img src="./images/mock_qr.svg" alt="QRコード" width="300px" height="300px">
